@@ -1,18 +1,15 @@
-package com.projects.pokemon;
-
 import javax.swing.*;
-import com.projects.pokemonMapGen.FileIO;
 
 public class MainPokemon {
 
     // read the map from file
     static String[][][][] mapArray = {
-            { FileIO.loadMap("com/projects/pokemon/maps/map4"), FileIO.loadMap("com/projects/pokemon/maps/map5"),
-                    FileIO.loadMap("com/projects/pokemon/maps/map6") },
-            { FileIO.loadMap("com/projects/pokemon/maps/map"), FileIO.loadMap("com/projects/pokemon/maps/map2"),
-                    FileIO.loadMap("com/projects/pokemon/maps/map3") },
-            { FileIO.loadMap("com/projects/pokemon/maps/map7"), FileIO.loadMap("com/projects/pokemon/maps/map8"),
-                    FileIO.loadMap("com/projects/pokemon/maps/map9") }
+            { FileIO.loadMap("maps/map4"), FileIO.loadMap("maps/map5"),
+                    FileIO.loadMap("maps/map6") },
+            { FileIO.loadMap("maps/map"), FileIO.loadMap("maps/map2"),
+                    FileIO.loadMap("maps/map3") },
+            { FileIO.loadMap("maps/map7"), FileIO.loadMap("maps/map8"),
+                    FileIO.loadMap("maps/map9") }
 
     };
 
@@ -31,7 +28,7 @@ public class MainPokemon {
         frame.setResizable(false);
 
         // create the character
-        JLabel character = new JLabel(new ImageIcon("com/projects/pokemon/images/character.png"));
+        JLabel character = new JLabel(new ImageIcon("images/character.png"));
         character.setBounds(2 * 32, 2 * 32, 32, 32);
         frame.add(character);
 
@@ -99,7 +96,7 @@ public class MainPokemon {
         for (int row = 0; row < 15; row++) {
             for (int col = 0; col < 15; col++) {
                 tiles[row][col] = new JLabel(
-                        new ImageIcon("com/projects/pokemon/images/" + map[row][col] + ".png"));
+                        new ImageIcon("images/" + map[row][col] + ".png"));
                 tiles[row][col].setBounds(col * 32, row * 32, 32, 32);
                 frame.add(tiles[row][col]);
             }
@@ -111,7 +108,7 @@ public class MainPokemon {
     public static void updateTiles(JLabel[][] tiles) {
         for (int j = 0; j < 15; j++) {
             for (int k = 0; k < 15; k++) {
-                tiles[j][k].setIcon(new ImageIcon("com/projects/pokemon/images/" + map[j][k] + ".png"));
+                tiles[j][k].setIcon(new ImageIcon("images/" + map[j][k] + ".png"));
             }
         }
     }

@@ -1,5 +1,3 @@
-package com.projects.pokemon;
-
 import javax.swing.*;
 
 public class Encounter {
@@ -41,12 +39,12 @@ public class Encounter {
         battleFrame.add(run);
 
         // add the enemy sprite
-        JLabel enemySprite = new JLabel(new ImageIcon("com/projects/pokemon/images/" + enemyName + ".png"));
+        JLabel enemySprite = new JLabel(new ImageIcon("images/" + enemyName + ".png"));
         enemySprite.setBounds(8 * 32, -64, 32 * 8, 32 * 8);
         battleFrame.add(enemySprite);
 
         // add the player sprite
-        JLabel playerSprite = new JLabel(new ImageIcon("com/projects/pokemon/images/" + playerName + ".png"));
+        JLabel playerSprite = new JLabel(new ImageIcon("images/" + playerName + ".png"));
         playerSprite.setBounds(0, 1 * 32, 32 * 8, 32 * 8);
         battleFrame.add(playerSprite);
 
@@ -71,7 +69,7 @@ public class Encounter {
         battleFrame.add(note);
 
         // add the background
-        JLabel background = new JLabel(new ImageIcon("com/projects/pokemon/images/background.png"));
+        JLabel background = new JLabel(new ImageIcon("images/background.png"));
         background.setBounds(0, 0, 16 * 32, 16 * 32);
         battleFrame.add(background);
 

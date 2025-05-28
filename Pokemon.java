@@ -1,5 +1,3 @@
-package com.projects.pokemon;
-
 public class Pokemon {
     private String name;
     private int health;
